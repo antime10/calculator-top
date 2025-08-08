@@ -14,7 +14,6 @@
 #output {
     background-color: white;
     border: 2px solid black;
-    /* width: 100%; */
     height: 62.5px;
     text-align: right;
     padding-top: 4%;
@@ -36,7 +35,6 @@
 
 .btn {
     border: 1px solid grey;
-    /* text-align: right; */
 }
 
 #input {
