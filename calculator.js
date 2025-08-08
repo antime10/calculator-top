@@ -107,8 +107,8 @@ document.querySelectorAll(".operator").forEach(
 		return;
 	    }
 	    // Apply the operator to the inputs
-	    result = operate(operator, first, second)
-	    output.innerText = result;
+	    result = operate(operator, first, second);
+	    output.innerText = result.toString().slice(0,10);
 	    first = null;
 	    second = null;
 	    operator = null;
@@ -125,6 +125,6 @@ document.querySelector("#clear").addEventListener(
 	second = null;
 	operator = null;
 	result = null;
-	output.innerText = "";
+	output.innerText = "0";
     }
 )
