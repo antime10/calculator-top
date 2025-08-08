@@ -71,11 +71,3 @@
     text-align: right;
 }
 
-.columns {
-    display: flex;
-}
-
-#ad {
-    margin-left: 10%;
-    font-size: x-large;
-}

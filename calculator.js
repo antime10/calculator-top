@@ -178,3 +178,13 @@ document.addEventListener(
 	}
     }
 )
+
+console.log(`Introducing the TOP003 calculator
+
+All the features you've come to expect:
+ - backspace button!
+ - keyboard controls!
+ - decimal input!
+ - no known deviations from the Odin Project base spec!
+ - best of all - it's free!
+ - try it today!`)
