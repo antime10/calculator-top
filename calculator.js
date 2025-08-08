@@ -29,9 +29,10 @@ function operate(func, first, second) {
 
 document.querySelectorAll(".number").forEach(
     el => el.addEventListener("click", (el) => {
-	if (result != null) {
-	    first = el.target.innerText;
-	    output.innerText = first;
+	if (result != null && operator != null) {
+	    first = result;
+	    second = el.target.innerText;
+	    output.innerText = second;
 	} else if (first == null && operator == null) {
 	    first = el.target.innerText;
 	    output.innerText = first;
@@ -66,19 +67,31 @@ document.querySelectorAll(".operator").forEach(
 	    break;
 	}
 	if (el.target.innerText == "=") {
+	    if (operator == null) {
+		return;
+	    }
+	    if (operator == divide && second == "0") {
+		output.innerText = "Can't trick me!";
+		return;
+	    }
 	    result = operate(operator, first, second)
 	    output.innerText = result;
-	    first = result;
+	    first = null;
 	    second = null;
 	    operator = null;
 	} else {
 	    output.innerText = el.target.innerText;
-	    result = null;
 	}
     })
 )
 
 document.querySelector("#clear").addEventListener(
     "click",
-    () => {first = null; second = null; operator = null; output.innerText = ""}
+    () => {
+	first = null;
+	second = null;
+	operator = null;
+	result = null;
+	output.innerText = "";
+    }
 )
