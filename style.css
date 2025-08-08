@@ -1,9 +1,6 @@
 * {
     box-sizing: border-box;
     font-family: "VT323", monospace;
-    font-weight: 400;
-    font-style: normal;
-    font-size: xx-large;
 }
 
 #calculator {
@@ -15,6 +12,10 @@
     flex: 1 1 auto;
     padding: 15px;
     filter: drop-shadow(10px 10px 1px grey);
+    flex: 0 0 auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
 }
 
 #output {
@@ -22,7 +23,7 @@
     height: 75px;
     text-align: right;
     padding-top: 2px;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-bottom: 3px;
 }
 
@@ -68,4 +69,13 @@
 #model {
     color: white;
     text-align: right;
+}
+
+.columns {
+    display: flex;
+}
+
+#ad {
+    margin-left: 10%;
+    font-size: x-large;
 }

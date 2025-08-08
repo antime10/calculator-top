@@ -128,3 +128,53 @@ document.querySelector("#clear").addEventListener(
 	output.innerText = "0";
     }
 )
+
+document.querySelector("#backspace").addEventListener(
+    "click",
+    () => {
+	if (second != null) {
+	    second = second.slice(0,-1);
+	    output.innerText = second;
+	} else if (first != null) {
+	    first = first.slice(0,-1);
+	    output.innerText = first;
+	}
+    }
+)
+
+function pressButton(value) {
+    document.querySelectorAll(".btn").forEach(
+	btn => {
+	    if (btn.textContent == value) {
+		btn.click()
+	    }
+	}
+    )
+}
+
+document.addEventListener(
+    "keydown",
+    (e) => {
+	if (
+	    [
+		"0",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+		"7",
+		"8",
+		"9",
+		"<",
+		"C",
+		"+",
+		"/",
+		"x",
+		"="
+	    ].includes(e.key)) {
+	    pressButton(e.key)
+	}
+    }
+)
