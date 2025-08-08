@@ -29,6 +29,13 @@ function operate(func, first, second) {
 
 document.querySelectorAll(".number").forEach(
     el => el.addEventListener("click", (el) => {
+	if (
+	    el.target.innerText == "." &&
+		result == null &&
+		output.innerText.includes(".")
+	) {
+	    return;
+	}
 	if (result != null && operator != null) {
 	    first = result;
 	    second = el.target.innerText;
@@ -46,6 +53,7 @@ document.querySelectorAll(".number").forEach(
 	    second = output.innerText + el.target.innerText;
 	    output.innerText = second;
 	}
+
 	result = null;
     })
 )

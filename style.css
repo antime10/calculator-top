@@ -3,7 +3,7 @@
 }
 
 #calculator {
-    height: 500px;
+    height: 450px;
     width: 300px;
     background-color: grey;
     display: flex;
@@ -14,14 +14,14 @@
 #output {
     background-color: white;
     border: 2px solid black;
-    height: 62.5px;
+    height: 75px;
     text-align: right;
-    padding-top: 4%;
+    padding-top: 25px;
 }
 
 #clear {
     background-color: orange;
-    height: 62.5px;
+    height: 75px;
     text-align: center;
 }
 
@@ -35,8 +35,17 @@
 
 .btn {
     border: 1px solid grey;
+    padding-top: 25px;
 }
 
 #input {
     display: flex;
+}
+
+.operator {
+    background-color: red;
+}
+
+#equal {
+    background-color: green;
 }
